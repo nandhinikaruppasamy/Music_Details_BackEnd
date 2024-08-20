@@ -5,6 +5,7 @@ API Endpoints Link : https://github.com/nandhinikaruppasamy/Music_Details_BackEn
 Vercel : https://music-player-backend-theta.vercel.app/api/songs
 
 Schema or Entity Relationship Diagram:
+
 <img width="594" alt="Screenshot 2024-08-20 at 11 32 50 AM" src="https://github.com/user-attachments/assets/89480105-465d-46ab-8300-f4f898b3991a">
 
 
