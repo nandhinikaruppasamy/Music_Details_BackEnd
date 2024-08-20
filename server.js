@@ -1,13 +1,14 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
-
+const cors=require('cors');
 dotenv.config();
 
 const app = express();
 connectDB();
 
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/songs', require('./routes/songs'));
 app.use('/api/playlists', require('./routes/playlists'));
