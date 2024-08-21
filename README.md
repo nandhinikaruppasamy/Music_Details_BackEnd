@@ -6,7 +6,8 @@ Vercel : https://music-player-backend-theta.vercel.app/api/songs
 
 Schema or Entity Relationship Diagram:
 
-<img width="594" alt="Screenshot 2024-08-20 at 11 32 50 AM" src="https://github.com/user-attachments/assets/89480105-465d-46ab-8300-f4f898b3991a">
+<img width="667" alt="Screenshot 2024-08-21 at 4 03 04 PM" src="https://github.com/user-attachments/assets/b1a2048c-3a92-4aac-9f2a-add0e123fcb8">
+
 
 
 
