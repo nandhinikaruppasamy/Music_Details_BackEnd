@@ -5,9 +5,18 @@ const Song = require('../models/Song');
 
 const router = express.Router();
 
-router.post('/', async (req, res) => {
-  const { name, description, songIds } = req.body;
+router.get('/read', async (req, res) => {
+  try {
+    const playlists = await Playlist.find().populate('songs'); 
+    res.json(playlists);
+  } catch (err) {
+    console.error('Error fetching playlists:', err);
+    res.status(500).send('Server error');
+  }
+});
 
+router.post('/add', async (req, res) => {
+  const { name, description, songIds } = req.body;
   try {
     const playlist = new Playlist({
       name,
@@ -22,20 +31,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/update/:id', async (req, res) => {
   const { id } = req.params;
   const { name, description, songIds } = req.body;
-
-  console.log(`Updating playlist with ID: ${id}`); 
-
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).json({ msg: 'Invalid playlist ID' });
   }
-
   try {
     let playlist = await Playlist.findById(id);
     if (!playlist) {
-      console.log('Playlist not found in the database'); 
       return res.status(404).json({ msg: 'Playlist not found' });
     }
 
@@ -52,7 +56,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
   try {
     const playlist = await Playlist.findById(req.params.id);
     if (!playlist) {
