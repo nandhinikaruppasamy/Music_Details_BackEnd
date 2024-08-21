@@ -2,7 +2,7 @@
 
 API Endpoints Link : https://github.com/nandhinikaruppasamy/Music_Details_BackEnd/blob/main/Music%20App.postman_collection.json
 
-Vercel : https://music-player-backend-theta.vercel.app/api/songs](https://music-player-backend-theta.vercel.app/api/playlists/read
+Vercel : https://music-player-backend-theta.vercel.app/api/playlists/read
 
 Schema or Entity Relationship Diagram:
 
